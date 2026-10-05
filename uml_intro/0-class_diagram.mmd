@@ -1,0 +1,17 @@
+classDiagram
+  class Book {
+    +String title
+    +String author
+    +Bool state
+  }
+  class User {
+    +String name
+    +String email
+  }
+  class Lone {
+    +String start_date
+    +String end_date
+  }
+
+  User "1" --> "*" Loan : makes
+  Loan "1" *-- "*" Book : contains
